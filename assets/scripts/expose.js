@@ -1,3 +1,4 @@
+// expose.js
 window.addEventListener('DOMContentLoaded', init);
 
 const jsConfetti = new JSConfetti()
