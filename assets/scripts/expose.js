@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', init);
 
+const jsConfetti = new JSConfetti()
+
 function init() {
   console.log('Init called');
   const section = document.getElementById('expose');
@@ -18,14 +20,14 @@ function init() {
   playButton.addEventListener('click', () => {
     audio.play();
     if (hornSelect.value === 'party-horn') {
-      new JSConfetti().addConfetti();
+      jsConfetti.addConfetti()
     }
   });
 
   function updateHorn() {
     const choice = hornSelect.value;
     console.log('Selected horn:', choice);
-    
+
     if (!choice || choice === 'select') {
       hornImage.src = 'assets/images/no-image.png';
       hornImage.alt = 'No image selected';
